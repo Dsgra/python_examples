@@ -4,6 +4,8 @@ import sounddevice as sd
 
 fs = 44100 # Hercios
 
+# Establece el tiempo de grabacion
+
 duracion = 10.5 # segundos
 
 # Elegir el interfaz con el que se grabara el audio
