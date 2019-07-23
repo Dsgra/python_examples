@@ -104,6 +104,47 @@ sol2 = (-b+cmath.sqrt(d))/(2*a)
 
 print('La solucion de {0} y {1}'.format(sol1,sol2))   
 
+'''
+En el siguiente pedazo de codigo se calcula la tangente utilizando diferente tipo de librerias de python. Hemos declarado la posibilidad de que el usuario pueda introducir el valor del numero que desean utilizar.
+'''
+import math
+import numpy as np
+import matplotlib.pyplot as plt
 
+# Funcion para averiguar el mayor denominador comun, interesante para calculos
+
+x = int(input('Introduce el primer denominador: '))
+y = int(input('Introduce el segundo denominador: '))
+print("math.gcd(x, y) : ", math.gcd(x, y))
+
+# Ahora voy  inlcuir formulas para averiguar el coseno
+
+z = int(input("Introduce el valor que deseas calcular: "))
+x = math.pi / z
+
+# Retorna el valor de la tangente
+
+print("El valor de la tangente de pi / z es : ", end ="")
+print(math.tan(x))
+
+# Representacion de la funcion tan() de python
+
+in_array = np.linspace(0, np.pi, 10)
+out_array = []
+
+for i in range(len(in_array)):
+        out_array.append(math.tan(in_array[i]))
+        i += 1
+
+print ("in_array : ", in_array)
+print("\nout_array :", out_array)
+
+# Red para Numpy.sin()
+
+plt.plot(in_array, out_array, color='red', marker="o")
+plt.title("math.tan()")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show()
 
 
