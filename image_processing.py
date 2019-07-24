@@ -57,12 +57,12 @@ plt.show()
 rows, cols = img.shape
 crow,ccol = rows/2 , cols/2
 
-# create a mask first, center square is 1, remaining all zeros
+# Mascara el centro del cuadrado 1, el resto 0s 
 
 mask = np.zeros((rows,cols,2),np.uint8)
 mask[crow-30:crow+30, ccol-30:ccol+30] 
 
-# apply mask and inverse DFT
+# DFT y mascara aplicados
 
 fshift = dft_shift*mask
 f_ishift = np.fft.ifftshift(fshift)
