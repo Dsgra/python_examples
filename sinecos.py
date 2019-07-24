@@ -12,3 +12,24 @@ plt.legend(loc="upper right")
 # Limite de y axis
 plt.ylim(-1.5, 1.5)
 plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+salary = np.fromfile("salaries.txt", dtype=int, sep=",")
+names = np.genfromtxt("names.txt", dtype='str', delimiter=",")
+
+x = np.arrange(len(names))
+
+plt.bar(x, salary)
+plt.xticks(x, names)
+
+plt.xlabel("Names")
+plt.ylabel("Salaries")
+plt.title("SalRandom")
+plt.show()
+
+print(np.max(salary), np.min(salary), np.average(salary), np.mediam(salary))
+
+
